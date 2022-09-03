@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Archives | Azong&#39;s Bolg</title>
+        <title>WSL安装教程（简化版） | Azong&#39;s Bolg</title>
         <meta name="author" content="Azong">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -120,118 +120,54 @@
                     </div>
                     <div id="main">
                         
-<div id="archives">
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/9/3</div>
-            <a href="/2022/09/03/How-to-install-wsl/">
-                <h3>WSL安装教程（简化版）</h3>
-            </a>
-            <div class="info">
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/Linux/" style="color: #03a9f4">
-                            Linux
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+<div class="article">
+    <div>
+        <h1>WSL安装教程（简化版） </h1>
     </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/9/1</div>
-            <a href="/2022/09/01/How-to-Use-Flex-2/">
-                <h3>怎么使用Flex布局（二）</h3>
-            </a>
-            <div class="info">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/9/3
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
                 
-                
-                <span class="tags">
-                    <span class="icon">
-                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/HTML/" style="color: #ffa2c4">
-                            HTML
-                        </a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/CSS/" style="color: #00a596">
-                            CSS
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+                <a href="/tags/Linux/" style="color: #00a596">
+                    Linux
+                </a>
+            </span>
+            
+        </span>
+        
     </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/8/30</div>
-            <a href="/2022/08/30/How-To-Use-Flex-1/">
-                <h3>怎么使用Flex布局（一）</h3>
-            </a>
-            <div class="info">
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/HTML/" style="color: #ff7d73">
-                            HTML
-                        </a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/CSS/" style="color: #03a9f4">
-                            CSS
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/8/26</div>
-            <a href="/2022/08/26/My-First-Article/">
-                <h3>我的第一篇博客</h3>
-            </a>
-            <div class="info">
-                
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>最近在学习linux，所以今天就出一个安装wsl的教程</p>
+<span id="more"></span>
+
+<p>具体的安装教程可以参考<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/install-manual">微软wsl安装文档</a><br>WSL就是适用于Linux的Windows子系统，可让开发人员直接在Windows上按原样运行GNU/Linux环境，且不会产生传统虚拟机或双启动设置开销。目前WSL有两个版本，WSL1 和 WSL2。<br>若要使用 WSL 2，需要运行 Windows 10 或者 Windows 11 。</p>
+<ul>
+<li>对于 x64 系统：版本 1903 或更高版本，内部版本为 18362 或更高版本。</li>
+<li>对于 ARM64 系统：版本 2004 或更高版本，内部版本为 19041 或更高版本。<h1 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h1>我们需要进入bios将系统的VT(虚拟化功能)打开，打开VT的具体方法大家可以网上搜索，这里不过多赘述。<h1 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h1>具体安装方法有两种。<h2 id="第一种方法（不推荐）"><a href="#第一种方法（不推荐）" class="headerlink" title="第一种方法（不推荐）"></a>第一种方法（不推荐）</h2>直接用Windows的PowerShell或者cmd（这两个都要用管理员身份运行）运行下面这个代码（个人不推荐使用这种办法，因为安装过程会出现各种报错，并且用这种办法需要较新的系统版本）<pre><code class="PowerShell">wsl --install
+</code></pre>
+<h2 id="第二种方法（推荐）"><a href="#第二种方法（推荐）" class="headerlink" title="第二种方法（推荐）"></a>第二种方法（推荐）</h2><h3 id="步骤1"><a href="#步骤1" class="headerlink" title="步骤1"></a>步骤1</h3>用管理员身份打开PowerShell，然后运行下面这段代码：<pre><code class="PowerShell">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
+如果你只想使用WSL 1，就可以直接跳到步骤5。<h3 id="步骤2"><a href="#步骤2" class="headerlink" title="步骤2"></a>步骤2</h3>然后运行：<pre><code class="PowerShell">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre>
+运行完代码后重启电脑。<h3 id="步骤3"><a href="#步骤3" class="headerlink" title="步骤3"></a>步骤3</h3>然后下载WSL2 Linux的内核包</li>
+<li><a target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a><br>下载完成后双击安装包，然后就会自动安装，等待安装完成后点击Finish即可。<h3 id="步骤4"><a href="#步骤4" class="headerlink" title="步骤4"></a>步骤4</h3>打开PowerShell，运行下面命令，将 WSL2 设置为默认版本：<pre><code class="PowerShell">wsl --set-default-version 2
+</code></pre>
+<h3 id="步骤5"><a href="#步骤5" class="headerlink" title="步骤5"></a>步骤5</h3>打开 Microsoft Store搜索WSL下载Linux分发版。根据个人喜好选择下载，我下载的是 Ubuntu 22.04 LTS 这个版本。</li>
+</ul>
+<p>至此你已经成功安装WSL,开启你脱发之旅吧！！！！</p>
+
     </div>
     
 </div>
